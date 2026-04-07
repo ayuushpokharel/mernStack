@@ -79,6 +79,7 @@ console.log(str.lastIndexOf("o")); //4
 
 //! truthy and falsy value
 //? falsy values( 0, -0, null, undefined, false)
+//? truthy values => {}, []
 
 let condition = "abc"; //read it as true value in boolean
 if(condition){

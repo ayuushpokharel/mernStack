@@ -38,11 +38,22 @@ switch(day){
 //! loops
 //!while
 let i = 0;
-
 while(i <= 10){
-    console.log("true");
+    console.log(i);
+    i ++;
 }
 //! do while
+let j = 0;
+do{
+    console.log(j);
+    j++;
+} while(j <= 10);
+
 //! for
+for(let k = 0; k <=4; k++){
+    console.log(k);
+}
+
 //? for in
+
 //? for of
