@@ -70,4 +70,4 @@ delete user.key
 console.log(user)
 let greet = (name) =>{
     console.log(`hey ${name}`)}
-user.greet()
+greet(user.name)
