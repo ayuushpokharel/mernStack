@@ -2,7 +2,7 @@
 
 let numbers = [1, 2, 3, 4] // literal method
 // OR
-let arr = new Array(1,2,3,4) // keyword method
+let arr = new Array(1, 2, 3, 4) // keyword method
 console.log(arr)
 console.log(numbers)
 
@@ -32,7 +32,7 @@ console.log(numbers)
 
 console.log(numbers.length)
 // print last element
-console.log(numbers[numbers.length -1]) //? the difference between the last index and length is exactly 1
+console.log(numbers[numbers.length - 1]) //? the difference between the last index and length is exactly 1
 // to use -1 => numbers.at(-1)
 
 //* index of 
@@ -50,8 +50,8 @@ console.log(numbers.concat([67, 78])) // same as => numbers.push(.....)
 console.log(numbers.join("-"));
 
 //* to add new elements on specific indices => arr.splice(start_index, delete_count, ...items)
-let num = [6,7,8,9]
-let y = num.splice(0,0,4,5) //? here the element is added after 0 index int the middle of index 0 and 1 without deleting other elements
+let num = [6, 7, 8, 9]
+let y = num.splice(0, 0, 4, 5) //? here the element is added after 0 index int the middle of index 0 and 1 without deleting other elements
 // let z = num.splice(0, 3)
 console.log(y)
 // console.log(z)
@@ -73,16 +73,16 @@ console.log(values)
 console.log(Object.fromEntries(a)) //? converts the 2D array into object
 
 //* for in => returns key (to loop in OBJECT)
-for (x in user){
-    console.log(x,": ", user[x])
+for (x in user) {
+    console.log(x, ": ", user[x])
 }
 
-for (z in num){
+for (z in num) {
     console.log(z) //? prints the index of values in array
 }
 
 //* for of
-for (y of num){
+for (y of num) {
     console.log(y) //? returns values
 }
 
@@ -90,6 +90,6 @@ for (y of num){
 //     console.log(p) //? TypeError: user is not iterable
 // }
 
-for (value of "hello"){
+for (value of "hello") {
     console.log(value)
 }
