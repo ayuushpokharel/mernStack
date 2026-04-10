@@ -72,18 +72,22 @@ const student = [
     marks: [20, 80, 29, 66, 78],
   },
 ];
-console.log(student)
-const stu_avg = student.map((student) => {
-  const total_mark = student.marks.reduce((acc, marks) => {
+console.log(student);
+const calcAvg = (marks) => {
+  const total_mark = marks.reduce((acc, marks) => {
     return (acc += marks);
   });
-  const avg = total_mark / student.marks.length;
+  const avg = total_mark / marks.length;
+  return avg;
+};
+const stu_avg = student.map((student) => {
+  let avg = calcAvg(student.marks);
   return {
     name: student.name,
     marks: student.marks,
     avg_marks: avg,
   };
 });
-const filterPass = stu_avg.filter((stu) => stu.avg_marks >= 50)
-const print = filterPass.map((stu) => `${stu.name}-${stu.avg_marks}`)
+const filterPass = stu_avg.filter((stu) => stu.avg_marks >= 50);
+const print = filterPass.map((stu) => `${stu.name}-${stu.avg_marks}`);
 console.log(print);
