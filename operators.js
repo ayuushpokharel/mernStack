@@ -1,7 +1,8 @@
 //! arithmetic operators(+ , -, *, **, /)
 console.log(12 + 3);
 let a = 12 - 3;
-let b = 23, c = 34;
+let b = 23,
+  c = 34;
 console.log(b - c);
 console.log(2 ** 4); //? 2 pow 4
 //! operator overloading
@@ -10,21 +11,20 @@ console.log("hello" + " " + "World");
 //! assignment operators(=, +=, -=,.....)
 let d = 34;
 b += c;
-b -=15; 
+b -= 15;
 
 //! comparison op (==, ===, <=, >=, !=, !==)
 console.log(12 > 10);
-console.log(12 >=10 );
-console.log(13==13); //? only compares the value
-console.log(12===12); //? type + value comparison
-
+console.log(12 >= 10);
+console.log(13 == 13); //? only compares the value
+console.log(12 === 12); //? type + value comparison
 
 //! logical operators (&&, ||, !)->(AND, OR, NOT)
 console.log(true && true); //? true
 console.log(true || false); //? true
 console.log(!true); //? false
 
-//! typeof operator 
+//! typeof operator
 console.log(typeof b); //? number
 console.log(typeof true); //? boolean
 console.log(typeof "abc"); //? string
@@ -32,20 +32,20 @@ console.log(typeof b === "number"); //? true
 let z = null;
 console.log(typeof z); //? object -> it's a bug of JS
 
-//! unary operator 
+//! unary operator
 let num = 1;
 console.log(num); // 1
-// pre 
+// pre
 console.log(++num); // 2
 // post
 console.log(num++); // 2
 console.log(num); // 3
 
 //! ternary operator (condition? statementA : statementB)
-num === 3 ? console.log("num is 3"): console.log("num is not 3");
+num === 3 ? console.log("num is 3") : console.log("num is not 3");
 
 let age = 17;
-let canVote = age>=18? "can vote": "cannot vote";
+let canVote = age >= 18 ? "can vote" : "cannot vote";
 console.log(canVote);
 
 //! type conversion
@@ -82,6 +82,6 @@ console.log(str.lastIndexOf("o")); //4
 //? truthy values => {}, []
 
 let condition = "abc"; //read it as true value in boolean
-if(condition){
-    console.log("run");
+if (condition) {
+  console.log("run");
 }
