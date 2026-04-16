@@ -50,3 +50,42 @@ row.getName();
 row.getPsw();
 
 // example => class Account(acc_name, initial_amt) => deposit(amt), withdraw(amt), blc_inquiry()
+class account {
+  #balance;
+  constructor(acc_name, initial_amt = 0) {
+    this.acc_name = acc_name;
+    this.#balance = initial_amt;
+  }
+
+  deposit(amt) {
+    if (amt > 1000 && amt <= 1000000) {
+      this.#balance += amt;
+      console.log(`Rs. ${amt} is deposited to your account`);
+    } else {
+      console.log(
+        "Enter the amount greater than Rs. 1000 to deposit.\nThank you for using this system.",
+      );
+    }
+  }
+  withdraw(amt) {
+    if (amt > 1000 && amt <= 100000) {
+      if (amt <= this.#balance) {
+        this.#balance -= amt;
+        console.log(`Rs. ${amt} is withdrawn from your account`);
+      } else {
+        console.log("Insufficient balance.\nThank you for using this system.");
+      }
+    } else {
+      console.log(
+        "Enter the amount greater than Rs. 1000 to withdraw.\nThank you for using this system.",
+      );
+    }
+  }
+  info() {
+    console.log(`Your current balance is: Rs. ${this.#balance}`);
+  }
+}
+let acc = new account("User", 10000);
+acc.withdraw(5000)
+acc.deposit(10000)
+acc.info()
