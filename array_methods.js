@@ -53,8 +53,10 @@ console.log(sum);
 //findIndex
 // let index = numbers.findIndex(numbers)
 // console.log(index)
-// every
-// some
+// every()
+// some()
+console.log(numbers.sort());
+// sort()
 
 //* Example Question
 //? to print the passed students with their average marks
