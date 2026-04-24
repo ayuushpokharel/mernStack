@@ -128,7 +128,7 @@ users.map((user) => {
   console.log(user.email);
 });
 
-//^  interface => inheritance
+//*  interface => inheritance
 interface ILogin {
   email: string;
   password: string;
@@ -151,12 +151,12 @@ const add = (a: number, b: number): number => {
 console.log(add(12, 3));
 // console.log(add("12", "3"));
 
-//& void
+//* void
 let greet = (name: string): void => {
   console.log(name);
 };
 
-//& never
+//* never
 const never = (): never => {
   throw "new error";
 };
@@ -269,3 +269,36 @@ console.log(identity(12));
 console.log(identity("abc"));
 
 //! utility type => hw
+
+//* partial utility =>  makes all fields optional
+interface iUser {
+  name: string;
+  email: string;
+  age: number;
+}
+
+let updateUser: Partial<iUser> = {
+  name: "John", //? no need to pass email or age
+};
+
+//* required => makes all fields required
+interface iUser1 {
+  name?: string; // opt
+  email?: string; //opt
+}
+
+let userA: Required<iUser1> = {
+  name: "John",
+  email: "john@gmail.com", //? now both are required
+};
+
+//* Readonly => prevents modification
+let userB: Readonly<iUser1> = {
+  name: "John",
+  email: "john@gmail.com"
+};
+// userB.name = "Jane"; // cannot reassign name to readonly property
+
+//* ReturnType => gets the return type of a function
+const add3 = (a: number, b: number): number => a + b;
+type AddReturn = ReturnType<typeof add>;// => number
