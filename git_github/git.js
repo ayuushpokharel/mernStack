@@ -38,13 +38,3 @@
 
 //* Clone Repo
 //! git clone <git_remote_repo_link> => copy the github repo to local
-
-// function registerUser() {
-//   console.log("user account created");
-//   return {
-//     _id: 1,
-//     userName: "JOHN123",
-//     email: "john@gmail.com",
-//     pass: "123456",
-//   };
-// }
