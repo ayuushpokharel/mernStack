@@ -22,5 +22,19 @@
 //! git checkout <branch_name> => same as switch
 //! git checkout -b <branch_name> => to create a branch and switch at the same time
 //! git merge <branch_name>
+// main => git merge feature/login
 
-//...test
+//* github
+//! git remote add origin <github_repo_url>
+//? git remote set-url origin https://github.com/ayuushpokharel/mernStack.git => to set the already created repo
+//! git remote -v
+//! git remote remove origin
+
+//! git push origin <branch_name>
+//! git pull origin <branch_name>
+
+//* Delete branch
+//! git branch -d <branch_name>
+
+//* Clone Repo
+//! git clone <git_remote_repo_link> => copy the github repo to local
