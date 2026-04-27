@@ -1,0 +1,15 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "npm_practice",
+  "license": "ISC",
+  "author": "Ayush Pokharel",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "url": "^0.11.4"
+  }
+}
